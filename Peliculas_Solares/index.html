@@ -140,7 +140,7 @@
             <model-viewer 
                 id="car-viewer"
                 class="w-full h-full -translate-y-[10%] md:translate-y-0 transition-transform duration-500" 
-                src="models/Jaecoo.glb" 
+                src="models/Golf.glb" 
                 camera-controls 
                 carColors="['silver']"
                 shadow-intensity="1.2" 
@@ -181,7 +181,7 @@
                                 <i class="ph-fill ph-car text-lg"></i>
                             </div>
 
-                            <span id="displayModelText" class="truncate">SUV</span>
+                            <span id="displayModelText" class="truncate">Hatch</span>
 
                             <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-500">
                                 <i id="modelArrow" class="ph-bold ph-caret-down transition-transform duration-200"></i>
@@ -190,9 +190,9 @@
 
                         <div id="modelOptionsList" class="hidden absolute bottom-full mb-2 left-0 right-0 bg-white dark:bg-gray-900 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 z-50 overflow-hidden transition-all animate-fade-in-up">
                             <ul class="max-h-60 overflow-y-auto py-1">
+                                <li onclick="selectModel('hatch', 'Hatch')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Hatch</li>
                                 <li onclick="selectModel('suv', 'SUV')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">SUV</li>
                                 <li onclick="selectModel('sedan', 'Sedã')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Sedã</li>
-                                <li onclick="selectModel('hatch', 'Hatch')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Hatch</li>
                                 <li onclick="selectModel('pickup', 'Caminhonete')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Caminhonete</li>
                                 <li onclick="selectModel('sport', 'Esportivo')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Esportivo</li>
                                 <li onclick="selectModel('classic', 'Antigo')" class="cursor-pointer px-4 py-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-xs font-bold text-gray-700 dark:text-gray-200">Antigo</li>
@@ -947,7 +947,7 @@
             activeZone: 'sides',
             currentTints: { sides: 'clear', front: 'clear' },
             isNight: false,
-            currentCar: 'suv',
+            currentCar: 'Hatch',
             currentColor: 'silver'
         };
 
