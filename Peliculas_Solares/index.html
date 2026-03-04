@@ -512,7 +512,7 @@
             
         <div class="relative bg-white dark:bg-gray-900 w-full h-full md:h-[90vh] md:max-h-[800px] md:max-w-lg md:rounded-3xl shadow-2xl overflow-hidden flex flex-col animate-fade-in-up">
             
-            <div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 z-20 shrink-0">
+            <div class="flex items-center justify-between px-4 pt-4  dark:border-gray-800 bg-white dark:bg-gray-900 z-20 shrink-0">
                 <span id="modal-step-indicator" class="text-[11px] font-bold text-moss uppercase tracking-widest bg-green-50 dark:bg-green-900/30 px-3 py-1.5 rounded-full">
                     Passo 1 de 3
                 </span>
@@ -1144,11 +1144,9 @@
                          `*Email:* ${email || 'Não informado'}\n\n` +
                          `*PRODUTOS ESCOLHIDOS:*\n` +
                          `*Laterais/Traseira:*\n` +
-                         `   Marca: ${budgetState.sides.brand}\n` +
                          `   Linha: ${budgetState.sides.name}${sideDisplay}\n` +
                          `   Valor: ${format(budgetState.sides.price)}\n\n` +
                          `*Para-brisa:*\n` +
-                         `   Marca: ${budgetState.front.brand}\n` +
                          `   Linha: ${budgetState.front.name}${frontDisplay}\n` +
                          `   Valor: ${budgetState.front.price === 0 ? 'Grátis/Original' : format(budgetState.front.price)}\n\n` +
                          `----------------------------\n` +
