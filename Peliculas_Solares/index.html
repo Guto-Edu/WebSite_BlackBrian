@@ -117,7 +117,7 @@
 
     <header class="fixed top-0 left-0 w-full p-6 z-40 flex justify-between items-start pointer-events-none">
     <div class="pointer-events-auto">
-        <img src="imgs/logo.png" 
+        <img src="/Peliculas_Solares/imgs/logo.png" 
              alt="Logo Loja" 
              class="h-24 md:h-36 w-auto z-2 object-contain transition-all duration-500 brightness-0 dark:brightness-100 drop-shadow-sm">
     </div>
@@ -140,14 +140,14 @@
             <model-viewer 
                 id="car-viewer"
                 class="w-full h-full -translate-y-[10%] md:translate-y-0 transition-transform duration-500" 
-                src="models/Golf.glb" 
+                src="/Peliculas_Solares/models/Golf.glb" 
                 camera-controls 
                 carColors="['silver']"
                 shadow-intensity="1.2" 
                 shadow-softness="0.8"
                 exposure="1"
                 tone-mapping="commerce"
-                environment-image="env/studio.hdr" 
+                environment-image="/Peliculas_Solares/env/studio.hdr" 
                 alt="Veículo 3D"
                 interaction-prompt="none"
                 min-camera-orbit="auto auto auto"
@@ -327,7 +327,7 @@
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-64 rounded-2xl overflow-hidden shadow-lg group">
-                <img src="imgs/bluetech.png" 
+                <img src="/Peliculas_Solares/imgs/bluetech.png" 
                         alt="Película BlueTech" 
                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                 </div>
@@ -337,7 +337,7 @@
 
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="h-64 rounded-2xl overflow-hidden shadow-lg group">
-                    <img src="imgs/garware.png" 
+                    <img src="/Peliculas_Solares/imgs/garware.png" 
                         alt="Película Garware" 
                         class="w-full object-cover transform group-hover:scale-105 mt-9 duration-700">
                 </div>
@@ -593,32 +593,32 @@
         const carModels = {
         sport: {
             name: 'Esportivo',
-            src: 'models/911.glb',
+            src: '/Peliculas_Solares/models/911.glb',
             camera: '45deg 75deg 145%'
         },
         suv: {
             name: 'SUV',
-            src: 'models/Jaecoo.glb',
+            src: '/Peliculas_Solares/models/Jaecoo.glb',
             camera: '35deg 75deg 155%'
         },
         hatch: {
             name: 'Hatch',
-            src: 'models/Golf.glb',
+            src: '/Peliculas_Solares/models/Golf.glb',
             camera: '45deg 70deg 150%'
         },
         sedan: {
             name: 'Sedã',
-            src: 'models/Sentra.glb',
+            src: '/Peliculas_Solares/models/Sentra.glb',
             camera: '40deg 75deg 150%'
         },
         pickup: {
             name: 'Caminhonete',
-            src: 'models/Frontier.glb',
+            src: '/Peliculas_Solares/models/Frontier.glb',
             camera: '30deg 70deg 165%'
         },
         classic: {
             name: 'Antigo',
-            src: 'models/Fusca.glb',
+            src: '/Peliculas_Solares/models/Fusca.glb',
             camera: '50deg 75deg 140%'
         }
         };
@@ -1178,12 +1178,12 @@
                 if (state.isNight) {
                     body.classList.add('dark');
                     icon.classList.replace('ph-moon', 'ph-sun');
-                    viewer.environmentImage = 'env/night.hdr'; 
+                    viewer.environmentImage = '/Peliculas_Solares/env/night.hdr'; 
                     viewer.exposure = 0.7;
                 } else {
                     body.classList.remove('dark');
                     icon.classList.replace('ph-sun', 'ph-moon');
-                    viewer.environmentImage = 'env/studio.hdr';
+                    viewer.environmentImage = '/Peliculas_Solares/env/studio.hdr';
                     viewer.exposure = 1;
                 }
             }, 100);
