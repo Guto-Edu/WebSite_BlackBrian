@@ -243,7 +243,8 @@
     <div class="pointer-events-auto">
         <img src="/Peliculas_Solares/imgs/logo.png" 
              alt="Logo Loja" 
-             class="h-24 md:h-36 w-auto z-2 object-contain transition-all duration-500 brightness-0 dark:brightness-100 drop-shadow-sm">
+             class="h-24 z-0 md:h-36 w-auto z-2 object-contain transition-all duration-500 brightness-0 dark:brightness-100 drop-shadow-sm">
+             
     </div>
     </header>
 
@@ -1396,7 +1397,6 @@
         // ================= NIGHT MODE & LOADER REATIVO =================
 
         const loader = document.getElementById('loading-overlay');
-        const nightBtn = document.getElementById('toggle-night');
 
         // Função auxiliar para mostrar/esconder loader
         function toggleLoader(show) {
@@ -1410,27 +1410,31 @@
         }
 
         // 1. Lógica do Botão (Mostra o loader -> Troca o tema)
+        const nightBtn = document.getElementById('toggle-night');
+
+        if (nightBtn) {
         nightBtn.addEventListener('click', () => {
             toggleLoader(true);
 
             setTimeout(() => {
-                state.isNight = !state.isNight;
-                const body = document.body;
-                const icon = document.getElementById('night-icon');
-                
-                if (state.isNight) {
-                    body.classList.add('dark');
-                    icon.classList.replace('ph-moon', 'ph-sun');
-                    viewer.environmentImage = '/Peliculas_Solares/env/night.hdr'; 
-                    viewer.exposure = 0.7;
-                } else {
-                    body.classList.remove('dark');
-                    icon.classList.replace('ph-sun', 'ph-moon');
-                    viewer.environmentImage = '/Peliculas_Solares/env/studio.hdr';
-                    viewer.exposure = 1;
-                }
+            state.isNight = !state.isNight;
+            const root = document.documentElement; // <html>
+            const icon = document.getElementById('night-icon');
+
+            if (state.isNight) {
+                body.classList.add('dark');
+                if (icon) icon.classList.replace('ph-moon', 'ph-sun');
+                viewer.environmentImage = '/Peliculas_Solares/env/night.hdr';
+                viewer.exposure = 0.7;
+            } else {
+                body.classList.remove('dark');
+                if (icon) icon.classList.replace('ph-sun', 'ph-moon');
+                viewer.environmentImage = '/Peliculas_Solares/env/studio.hdr';
+                viewer.exposure = 1;
+            }
             }, 100);
         });
+        }
 
         // 3. Quando a iluminação (Environment) terminar de trocar
         viewer.addEventListener('environment-change', () => {
