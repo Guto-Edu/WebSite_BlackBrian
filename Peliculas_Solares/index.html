@@ -869,15 +869,15 @@
         // ================= DADOS DE PREÇOS =================
         const pricingData = {
             sides: [    
-                { id: 'nano_carb', brand: 'Pelicula', name: 'Nano Carbono (G5 a G50)', price: 690, desc: 'Media retenção de calor e estabilidade de cor' },
-                { id: 'nano_cer',  brand: 'Pelicula', name: 'Nano Cerâmica (G5 a G70)', price: 890, desc: 'Alta rejeição de calor e conforto térmico.' },
-                { id: 'cer_prem',  brand: 'Pelicula', name: 'Cerâmica Premium (G70)', price: 1200, desc: 'Máxima transparência com rejeição extrema de calor.' },
+                { id: 'nano_carb', brand: 'Pelicula', name: 'Nano Carbono', price: 690, desc: 'Media retenção de calor e estabilidade de cor' },
+                { id: 'nano_cer',  brand: 'Pelicula', name: 'Nano Cerâmica', price: 890, desc: 'Alta rejeição de calor e conforto térmico.' },
+                { id: 'cer_prem',  brand: 'Pelicula', name: 'Cerâmica Premium', price: 1200, desc: 'Máxima transparência com rejeição extrema de calor.' },
                 { id: 'none',      brand: 'Original',    name: 'Sem Película', price: 0, desc: 'Vidro original transparente.' }
             ],
             front: [
-                { id: 'nano_carb', brand: 'Pelicula', name: 'Nano Carbono (G5 a G50)', price: 410, desc: 'Media retenção de calor e estabilidade de cor' },
-                { id: 'nano_cer',  brand: 'Pelicula', name: 'Nano Cerâmica (G5 a G70)', price: 510, desc: 'Alta rejeição de calor e conforto térmico.' },
-                { id: 'cer_prem',  brand: 'Pelicula', name: 'Cerâmica Premium (G70)', price: 750, desc: 'Máxima transparência com rejeição extrema de calor.' },
+                { id: 'nano_carb', brand: 'Pelicula', name: 'Nano Carbono', price: 410, desc: 'Media retenção de calor e estabilidade de cor' },
+                { id: 'nano_cer',  brand: 'Pelicula', name: 'Nano Cerâmica', price: 510, desc: 'Alta rejeição de calor e conforto térmico.' },
+                { id: 'cer_prem',  brand: 'Pelicula', name: 'Cerâmica Premium', price: 750, desc: 'Máxima transparência com rejeição extrema de calor.' },
                 { id: 'none',      brand: 'Original',    name: 'Sem Película', price: 0, desc: 'Manter vidro original transparente.'}
             ]
         };
@@ -951,13 +951,33 @@
         }
 
         // Função auxiliar para calcular as listas válidas baseadas no 3D
+        function allowedProductIdsByTint(tintCode) {
+            // Regras:
+            // - clear: só "none"
+            // - até G35 (g5, g20, g35): nano_carb + nano_cer + none
+            // - acima de G35 (g70): nano_cer + cer_prem + none
+            if (!tintCode || tintCode === 'clear') return ['nano_carb', 'nano_cer', 'cer_prem', 'none'];
+
+            if (tintCode === 'g70') return ['nano_cer', 'cer_prem', 'none'];
+
+            // g35, g20, g5 (e qualquer outro mais escuro que você adicione)
+            return ['nano_carb', 'nano_cer', 'none'];
+        }
+
+        function filterPricingByTint(list, tintCode) {
+            const allowed = allowedProductIdsByTint(tintCode);
+            return list.filter(item => allowed.includes(item.id));
+        }
+
+        // Função auxiliar para calcular as listas válidas baseadas no 3D
         function getFilteredLists() {
+            const sidesTint = state.currentTints.sides; // 'g20' | 'g35' | 'g70' | 'clear'...
+            const frontTint = state.currentTints.front;
 
             return {
-                filteredSides: pricingData.sides,
-                filteredFront: pricingData.front
-            }
-
+            filteredSides: filterPricingByTint(pricingData.sides, sidesTint),
+            filteredFront: filterPricingByTint(pricingData.front, frontTint),
+            };
         }
         // ================= LÓGICA DO MODAL =================
 
