@@ -551,6 +551,7 @@
       bancos: { id: "bancos", name: "Tratamento dos Bancos", price: 200 },
       chuva: { id: "chuva", name: "Remoção de Chuva Ácida", price: 150 },
       enceramento: { id: "enceramento", name: "Enceramento com Máquina", price: 180 },
+      couros: { id: "couros", name: "Vitrificação dos Couros", price: 250 },
       plast_ext: { id: "plast_ext", name: "Vitrificação dos Plásticos Externos", price: 200 },
       plast_int: { id: "plast_int", name: "Vitrificação dos Plásticos Internos", price: 200 },
       vidros: { id: "vidros", name: "Vitrificação dos Vidros", price: 300 },
@@ -563,12 +564,14 @@
       OPTIONALS.motor,
       OPTIONALS.chuva,
       OPTIONALS.enceramento,
+      OPTIONALS.couros,
       OPTIONALS.plast_ext,
       OPTIONALS.plast_int,
     ],
     cristalizacao: [
       OPTIONALS.motor,
       OPTIONALS.bancos,
+      OPTIONALS.couros,
       OPTIONALS.chuva,
       OPTIONALS.plast_ext,
       OPTIONALS.plast_int,
@@ -578,6 +581,7 @@
      vitrificacao_pintura: [
       OPTIONALS.motor,
       OPTIONALS.bancos,
+      OPTIONALS.couros,
       OPTIONALS.chuva,
       OPTIONALS.plast_ext,
       OPTIONALS.plast_int,
@@ -587,6 +591,7 @@
     limpeza_protetora: [
       OPTIONALS.motor,
       OPTIONALS.bancos,
+      OPTIONALS.couros,
       OPTIONALS.chuva,
       OPTIONALS.enceramento,
       OPTIONALS.plast_ext,
