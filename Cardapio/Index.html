@@ -138,208 +138,37 @@
   </header>
 
   <main class="max-w-7xl mx-auto px-4 pb-16 space-y-24">
-
     <section>
-      <div class="flex items-end justify-between mb-10 border-b border-white/20 pb-4">
+    <div class="mb-8">
+      <span class="text-brand-400 font-bold tracking-widest uppercase text-sm border-b-2 border-brand-500 pb-1">Cuidados Periodicos</span>
+      <h2 class="text-3xl font-black text-white mt-4">LIMPEZA DE MANUTENCAO</h2>
+      <p class="text-zinc-400 mt-2 font-medium">Servico exclusivo para veiculos que ja passaram por vitrificacao.</p>
+    </div>
+
+    <div class="glass p-6 rounded-3xl border border-brand-500/30 mb-12 bg-zinc-900/50">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div>
-          <h2 class="text-3xl font-black text-white mt-4 mb-6 border-l-4 border-brand-500 pl-4">Limpeza Protetora</h2>
-          <p class="text-zinc-400 text-sm font-medium">Pacotes com escolha flexível de opcionais.</p>
+          <span class="inline-flex items-center gap-2 bg-brand-900/40 border border-brand-500/30 px-3 py-1.5 rounded-full text-[11px] font-black uppercase tracking-[0.2em] text-brand-300 mb-4">
+            <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+            Apenas carros vitrificados
+          </span>
+          <h3 class="text-2xl font-black text-white mb-2">Limpeza tecnica de manutencao</h3>
+          <p class="text-zinc-400 text-sm max-w-2xl">Para garantir a durabilidade da proteção.</p>
+        </div>
+
+        <div class="bg-black/40 border border-white/10 rounded-2xl p-5 min-w-[260px]">
+          <p class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Valor</p>
+          <p class="text-3xl font-black text-white mb-4">R$ 100</p>
+          <a
+            href="https://wa.me/5532999734079?text=Ol%C3%A1!%20Quero%20agendar%20uma%20limpeza%20de%20manuten%C3%A7%C3%A3o%20para%20um%20carro%20j%C3%A1%20vitrificado."
+            target="_blank"
+            class="inline-flex w-full justify-center py-3 rounded-xl font-black bg-brand-600 text-white hover:bg-brand-500 transition shadow-lg shadow-brand-900/40 uppercase tracking-wide">
+            AGENDAR
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        
-        <div class="glass p-6 rounded-3xl hover:border-brand-500 transition duration-300 flex flex-col group">
-          <div class="mb-4">
-            <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest">Standard</span>
-            <h3 class="text-xl font-bold text-white">LIMPEZA <span class="text-brand-400">PLUS</span></h3>
-          </div>
-          <div class="flex items-baseline gap-1 mb-6">
-            <span class="text-sm text-zinc-400">R$</span>
-            <span class="text-4xl font-black text-white">380</span>
-          </div>
-          
-          <div class="flex-1">
-            <ul class="space-y-3 mb-6 text-sm text-zinc-300 font-medium">
-              <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Lavagem Técnica</li>
-              <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Aspiração Completa</li>
-              <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Limpeza Interna Detalhada</li>
-              <li class="flex gap-2"><span class="text-brand-400 font-bold mb-4">✓</span> Enceramento Premium</li>
-              <li class="flex gap-2 items-center font-bold text-white mt-4 bg-zinc-800 p-3 rounded-lg border border-zinc-700">
-                <span class="text-brand-400 text-lg">+</span> Escolha 1 Opcional
-              </li>
-            </ul>
-          </div>
-
-        <button
-          onclick="openOptionsModal({
-            name: 'Limpeza Plus',
-            basePrice: 380,
-            min: 1,
-            included: 1,
-            options: SERVICE_OPTION_MAP.limpeza_protetora
-          })"
-          class="w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider bg-zinc-800 text-white border border-zinc-600 hover:bg-white hover:text-black hover:border-white transition shadow-md">
-          Selecionar
-        </button>
-        </div>
-
-        <div class="glass p-6 rounded-3xl border-2 border-brand-500 relative overflow-hidden flex flex-col shadow-[0_0_25px_rgba(78,127,73,0.15)] bg-zinc-900/40">
-            <div class="absolute top-0 right-0 bg-brand-600 px-4 py-1.5 rounded-bl-xl text-[11px] font-black uppercase text-white shadow-md">Recomendado</div>
-            <div class="mb-4">
-                <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Premium</span>
-                <h3 class="text-xl font-bold text-white">LIMPEZA <span class="text-brand-400">PRO</span></h3>
-            </div>
-            <div class="flex items-baseline gap-1 mb-6">
-                <span class="text-sm text-zinc-400">R$</span>
-                <span class="text-5xl font-black text-white drop-shadow-lg">510</span>
-            </div>
-            
-            <div class="flex-1">
-                <ul class="space-y-3 mb-6 text-sm text-zinc-200 font-medium">
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Lavagem Técnica</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Aspiração Completa</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Limpeza Interna Detalhada</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold mb-4">✓</span> Enceramento Premium</li>
-                <li class="flex gap-2 items-center font-bold text-white mt-4 bg-brand-900/60 p-3 rounded-lg border border-brand-500/50">
-                    <span class="text-brand-300 text-lg">+</span> Escolha 2 Opcionais
-                  </li>
-                </ul>
-            </div>
-
-            <button
-              onclick="openOptionsModal({
-                name: 'Limpeza Pro',
-                basePrice: 510,
-                min: 2,
-                included: 2,
-                options: SERVICE_OPTION_MAP.limpeza_protetora
-              })"
-              class="w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider bg-brand-600 text-white hover:bg-brand-500 transition shadow-lg shadow-brand-900/40 border border-brand-500">
-              Selecionar
-            </button>
-        </div>
-
-        <div class="glass p-6 rounded-3xl hover:border-brand-500 transition duration-300 flex flex-col">
-            <div class="mb-4">
-                <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest">Ultimate</span>
-                <h3 class="text-xl font-bold text-white">LIMPEZA <span class="text-brand-400">MAX</span></h3>
-            </div>
-            <div class="flex items-baseline gap-1 mb-6">
-                <span class="text-sm text-zinc-400">R$</span>
-                <span class="text-4xl font-black text-white">650</span>
-            </div>
-            
-            <div class="flex-1">
-                <ul class="space-y-3 mb-6 text-sm text-zinc-300 font-medium">
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Lavagem Técnica</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Aspiração Completa</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold">✓</span> Limpeza Interna Detalhada</li>
-                <li class="flex gap-2"><span class="text-brand-400 font-bold mb-4">✓</span> Enceramento Premium</li>
-                <li class="flex gap-2 items-center font-bold text-white mt-4 bg-zinc-800 p-3 rounded-lg border border-zinc-700">
-                    <span class="text-brand-400 text-lg">+</span> Escolha 3 Opcionais
-                  </li>
-                </ul>
-            </div>
-
-            <button
-              onclick="openOptionsModal({
-                name: 'Limpeza Max',
-                basePrice: 650,
-                min: 3,
-                included: 3,
-                options: SERVICE_OPTION_MAP.limpeza_protetora
-              })"
-              class="w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider bg-zinc-800 text-white border border-zinc-600 hover:bg-white hover:text-black hover:border-white transition shadow-md">
-              Selecionar
-            </button>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="mb-10 border-b border-white/20 pb-4">
-        <h2 class="text-3xl font-black text-white mb-6 border-l-4 border-brand-500 pl-4">Tratamentos Específicos</h2>
-        <p class="text-zinc-400 text-sm font-medium">Procedimentos focados em necessidades específicas do veículo.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <div class="glass p-8 rounded-3xl relative flex flex-col hover:border-brand-400 transition">
-          <div class="flex-col items-start mb-4">
-            <h3 class="text-2xl font-bold text-white">
-              HIGIENIZAÇÃO <span class="text-brand-400">INTERNA</span>
-            </h3>
-            <div class="flex flex-col mt-4 items-start">
-              <span class="text-xs text-zinc-400 uppercase tracking-wider font-bold">Valor</span>
-              <span class="text-4xl font-black text-white">R$ 750</span>
-            </div>
-          </div>
-
-          <p class="text-zinc-300 text-sm mb-6 font-medium leading-relaxed">
-            Limpeza profunda e técnica de todo o interior do veículo, focada em saúde, conforto e renovação.
-          </p>
-
-          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1 font-medium">
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Limpeza profunda de bancos, carpetes e teto</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Higienização de painéis, portas e console</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Remoção de odores e sujeiras impregnadas</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Oxi-sanitização para eliminação de fungos e bactérias</li>
-          </ul>
-
-          <button
-            onclick="openOptionsModal({
-              name: 'Higienização Interna',
-              basePrice: 750,
-              min: 0,
-              included: 0,
-              options: SERVICE_OPTION_MAP.higienizacao_interna
-            })"
-            class="w-full py-4 rounded-xl font-bold bg-zinc-100 text-black hover:bg-brand-500 hover:text-white transition shadow-lg">
-            SELECIONAR
-          </button>
-        </div>
-
-        <div class="glass p-8 rounded-3xl relative flex flex-col hover:border-brand-400 transition">
-          <div class="flex-col justify-between items-start mb-4">
-            <h3 class="text-2xl font-bold text-white">
-              CRISTALIZAÇÃO <span class="text-brand-400">PAINT</span>
-            </h3>
-            <div class="flex flex-col mt-4 items-start">
-              <span class="text-xs text-zinc-400 uppercase tracking-wider font-bold">Valor</span>
-              <span class="text-4xl font-black text-white">R$ 650</span>
-            </div>
-          </div>
-
-          <p class="text-zinc-300 text-sm mb-6 font-medium leading-relaxed">
-            Tratamento indicado para revitalizar a pintura e criar uma camada de proteção de curto prazo.
-          </p>
-
-          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1 font-medium">
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Correção leve de pintura por polimento técnico</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Remoção de hologramas e marcas leves</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Aplicação de selante/proteção sintética</li>
-            <li class="flex gap-2"><span class="text-brand-400">✓</span> Brilho renovado e proteção por até 3 meses</li>
-          </ul>
-
-          <button
-            onclick="openOptionsModal({
-              name: 'Cristalização Paint',
-              basePrice: 650,
-              min: 0,
-              included: 0,
-              options: SERVICE_OPTION_MAP.cristalizacao
-            })"
-            class="w-full py-4 rounded-xl font-bold bg-zinc-100 text-black hover:bg-brand-500 hover:text-white transition shadow-lg">
-            SELECIONAR
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
     <div class="mb-8">
       <span class="text-brand-400 font-bold tracking-widest uppercase text-sm border-b-2 border-brand-500 pb-1">Tecnologia Nano</span>
       <h2 class="text-3xl font-black text-white mt-4">VITRIFICAÇÃO DE PINTURA</h2>
@@ -460,6 +289,165 @@
 
     </div>
     </section>
+    <section>
+      <div class="flex items-end justify-between mb-10 border-b border-white/20 pb-4">
+        <div>
+          <h2 class="text-3xl font-black text-white mt-4 mb-6 border-l-4 border-brand-500 pl-4">Pacotes Personalizados</h2>
+          <p class="text-zinc-400 text-sm font-medium">Monte sua limpeza ou seu tratamento do jeito que fizer mais sentido para o seu carro.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        
+        <div class="glass p-6 rounded-3xl hover:border-brand-500 transition duration-300 flex flex-col group">
+          <div class="mb-4">
+            <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest">Personalizado</span>
+            <h3 class="text-xl font-bold text-white">MONTE SUA <span class="text-brand-400">LIMPEZA</span></h3>
+          </div>
+          <div class="flex items-baseline gap-2 mb-6">
+            <span class="text-sm text-zinc-400">A partir de</span>
+            <span class="text-4xl font-black text-white">R$ 380</span>
+          </div>
+          
+          <div class="flex-1">
+            <ul class="space-y-3 mb-6 text-sm text-zinc-300 font-medium">
+              <li class="flex gap-2"><span class="text-brand-400 font-bold">-</span> Comeca com a base de R$ 380,00</li>
+              <li class="flex gap-2"><span class="text-brand-400 font-bold">-</span> Escolha quantos opcionais quiser.</li>
+            </ul>
+          </div>
+
+        <button
+          onclick="openOptionsModal({
+            name: 'Monte sua Limpeza',
+            basePrice: 380,
+            min: 1,
+            included: 0,
+            options: SERVICE_OPTION_MAP.limpeza_protetora,
+            pricingMode: 'tiered_cleaning'
+          })"
+          class="w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider bg-zinc-800 text-white border border-zinc-600 hover:bg-white hover:text-black hover:border-white transition shadow-md">
+          Selecionar
+        </button>
+        </div>
+
+        <div class="glass p-6 rounded-3xl border-2 border-brand-500 relative overflow-hidden flex flex-col shadow-[0_0_25px_rgba(78,127,73,0.15)] bg-zinc-900/40">
+            <div class="absolute top-0 right-0 bg-brand-600 px-4 py-1.5 rounded-bl-xl text-[11px] font-black uppercase text-white shadow-md">Recomendado</div>
+            <div class="mb-4">
+                <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Combinavel</span>
+                <h3 class="text-xl font-bold text-white">MONTE SEU <span class="text-brand-400">TRATAMENTO</span></h3>
+            </div>
+            <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-sm text-zinc-400">Escolha livre</span>
+                <span class="text-5xl font-black text-white drop-shadow-lg">+</span>
+            </div>
+            
+            <div class="flex-1">
+                <ul class="space-y-3 mb-6 text-sm text-zinc-200 font-medium">
+                <li class="flex gap-2"><span class="text-brand-400 font-bold">-</span> Combine tratamentos internos e externos</li>
+                <li class="flex gap-2"><span class="text-brand-400 font-bold">-</span> Inclua opcionais extras no mesmo pedido</li>
+                <li class="flex gap-2"><span class="text-brand-400 font-bold">-</span> Vitrificacao de pintura 1 a 3 anos de durabilidade.</li>
+                </ul>
+            </div>
+
+            <button
+              onclick="openOptionsModal({
+                name: 'Monte seu Tratamento',
+                basePrice: 0,
+                min: 1,
+                included: 0,
+                options: SERVICE_OPTION_MAP.monte_tratamento,
+                pricingMode: 'treatment_builder'
+              })"
+              class="w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider bg-brand-600 text-white hover:bg-brand-500 transition shadow-lg shadow-brand-900/40 border border-brand-500">
+              Selecionar
+            </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="mb-10 border-b border-white/20 pb-4">
+        <h2 class="text-3xl font-black text-white mb-6 border-l-4 border-brand-500 pl-4">Tratamentos Específicos</h2>
+        <p class="text-zinc-400 text-sm font-medium">Procedimentos focados em necessidades específicas do veículo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="glass p-8 rounded-3xl relative flex flex-col hover:border-brand-400 transition">
+          <div class="flex-col items-start mb-4">
+            <h3 class="text-2xl font-bold text-white">
+              HIGIENIZAÇÃO <span class="text-brand-400">INTERNA</span>
+            </h3>
+            <div class="flex flex-col mt-4 items-start">
+              <span class="text-xs text-zinc-400 uppercase tracking-wider font-bold">Valor</span>
+              <span class="text-4xl font-black text-white">R$ 750</span>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 text-sm mb-6 font-medium leading-relaxed">
+            Limpeza profunda e técnica de todo o interior do veículo, focada em saúde, conforto e renovação.
+          </p>
+
+          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1 font-medium">
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Limpeza profunda de bancos, carpetes e teto</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Higienização de painéis, portas e console</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Remoção de odores e sujeiras impregnadas</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Oxi-sanitização para eliminação de fungos e bactérias</li>
+          </ul>
+
+          <button
+            onclick="openOptionsModal({
+              name: 'Higienização Interna',
+              basePrice: 750,
+              min: 0,
+              included: 0,
+              options: SERVICE_OPTION_MAP.higienizacao_interna
+            })"
+            class="w-full py-4 rounded-xl font-bold bg-zinc-100 text-black hover:bg-brand-500 hover:text-white transition shadow-lg">
+            SELECIONAR
+          </button>
+        </div>
+
+        <div class="glass p-8 rounded-3xl relative flex flex-col hover:border-brand-400 transition">
+          <div class="flex-col justify-between items-start mb-4">
+            <h3 class="text-2xl font-bold text-white">
+              CRISTALIZAÇÃO <span class="text-brand-400">PAINT</span>
+            </h3>
+            <div class="flex flex-col mt-4 items-start">
+              <span class="text-xs text-zinc-400 uppercase tracking-wider font-bold">Valor</span>
+              <span class="text-4xl font-black text-white">R$ 650</span>
+            </div>
+          </div>
+
+          <p class="text-zinc-300 text-sm mb-6 font-medium leading-relaxed">
+            Tratamento indicado para revitalizar a pintura e criar uma camada de proteção de curto prazo.
+          </p>
+
+          <ul class="space-y-3 text-sm text-zinc-300 mb-8 flex-1 font-medium">
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Correção leve de pintura por polimento técnico</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Remoção de hologramas e marcas leves</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Aplicação de selante/proteção sintética</li>
+            <li class="flex gap-2"><span class="text-brand-400">✓</span> Brilho renovado e proteção por até 3 meses</li>
+          </ul>
+
+          <button
+            onclick="openOptionsModal({
+              name: 'Cristalização Paint',
+              basePrice: 650,
+              min: 0,
+              included: 0,
+              options: SERVICE_OPTION_MAP.cristalizacao
+            })"
+            class="w-full py-4 rounded-xl font-bold bg-zinc-100 text-black hover:bg-brand-500 hover:text-white transition shadow-lg">
+            SELECIONAR
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    
 
     <section class="space-y-8">
         <h2 class="text-3xl font-black text-white mb-6 border-l-4 border-brand-500 pl-4">Combos Especiais</h2>
@@ -558,6 +546,49 @@
       oxi: { id: "oxi", name: "Oxi-Sanitização", price: 100 }
     };
 
+    const TREATMENTS = {
+      tratamento_interno: {
+        id: "tratamento_interno",
+        name: "Tratamento Interno",
+        price: 750,
+        kind: "treatment",
+        description: "Higienizacao completa no interior do veículo.",
+        includedOptionIds: ["bancos"]
+      },
+      cristalizacao_pintura: {
+        id: "cristalizacao_pintura",
+        name: "Cristalizacao de Pintura",
+        price: 650,
+        kind: "treatment",
+        description: "Revitaliza a pintura com protecao de curto prazo.",
+        includedOptionIds: []
+      },
+      vitrificacao_1_ano: {
+        id: "vitrificacao_1_ano",
+        name: "Vitrificacao de Pintura 1 Ano",
+        price: 1200,
+        kind: "treatment",
+        description: "Protecao ceramica com durabilidade de 1 ano.",
+        includedOptionIds: []
+      },
+      vitrificacao_2_anos: {
+        id: "vitrificacao_2_anos",
+        name: "Vitrificacao de Pintura 2 Anos",
+        price: 1600,
+        kind: "treatment",
+        description: "Protecao ceramica com durabilidade de 2 anos.",
+        includedOptionIds: []
+      },
+      vitrificacao_3_anos: {
+        id: "vitrificacao_3_anos",
+        name: "Vitrificacao de Pintura 3 Anos",
+        price: 1980,
+        kind: "treatment",
+        description: "Protecao ceramica com durabilidade de 3 anos.",
+        includedOptionIds: []
+      }
+    };
+
     const SERVICE_OPTION_MAP = {
 
     higienizacao_interna: [
@@ -598,6 +629,22 @@
       OPTIONALS.plast_int,
       OPTIONALS.vidros,
       OPTIONALS.oxi
+    ],
+    monte_tratamento: [
+      { ...TREATMENTS.tratamento_interno, group: "Tratamentos" },
+      { ...TREATMENTS.cristalizacao_pintura, group: "Tratamentos" },
+      { ...TREATMENTS.vitrificacao_1_ano, group: "Tratamentos" },
+      { ...TREATMENTS.vitrificacao_2_anos, group: "Tratamentos" },
+      { ...TREATMENTS.vitrificacao_3_anos, group: "Tratamentos" },
+      { ...OPTIONALS.motor, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.bancos, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.couros, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.chuva, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.enceramento, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.plast_ext, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.plast_int, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.vidros, kind: "optional", group: "Opcionais Extras" },
+      { ...OPTIONALS.oxi, kind: "optional", group: "Opcionais Extras" }
     ]
 
     };  
@@ -608,10 +655,105 @@
       included: 0,
       selected: [],
       availableOptions: [],
-      freeIds: []
+      freeIds: [],
+      pricingMode: "standard"
     };
 
+    function isTieredCleaningMode() {
+      return modalConfig.pricingMode === "tiered_cleaning";
+    }
+
+    function isTreatmentBuilderMode() {
+      return modalConfig.pricingMode === "treatment_builder";
+    }
+
+    function getTieredCleaningCharge(selectedIndex, optionPrice) {
+      if (selectedIndex <= 0) return 0;
+      if (selectedIndex === 1) return 130;
+      if (selectedIndex === 2) return 140;
+      return optionPrice;
+    }
+
+    function getBundledOptionalIds() {
+      if (!isTreatmentBuilderMode()) return [];
+
+      const bundled = new Set();
+      modalConfig.selected
+        .filter(item => item.kind === "treatment")
+        .forEach(item => {
+          (item.includedOptionIds || []).forEach(id => bundled.add(id));
+        });
+
+      return Array.from(bundled);
+    }
+
+    function getBundledByLabel(optionId) {
+      return modalConfig.selected
+        .filter(item => item.kind === "treatment" && (item.includedOptionIds || []).includes(optionId))
+        .map(item => item.name)
+        .join(", ");
+    }
+
+    function hasSelectedTreatment(...ids) {
+      return modalConfig.selected.some(item => item.kind === "treatment" && ids.includes(item.id));
+    }
+
+    function isPaintProtectionTreatment(item) {
+      return item.kind === "treatment" && [
+        "cristalizacao_pintura",
+        "vitrificacao_1_ano",
+        "vitrificacao_2_anos",
+        "vitrificacao_3_anos"
+      ].includes(item.id);
+    }
+
+    function shouldDisableTreatmentOption(opt) {
+      if (!isTreatmentBuilderMode() || opt.kind !== "treatment") return false;
+
+      const hasCristalizacao = hasSelectedTreatment("cristalizacao_pintura");
+      const hasVitrificacao = hasSelectedTreatment("vitrificacao_1_ano", "vitrificacao_2_anos", "vitrificacao_3_anos");
+
+      if (opt.id === "cristalizacao_pintura") {
+        return hasVitrificacao;
+      }
+
+      if (["vitrificacao_1_ano", "vitrificacao_2_anos", "vitrificacao_3_anos"].includes(opt.id)) {
+        return hasCristalizacao;
+      }
+
+      return false;
+    }
+
+    function shouldDisableOptionalInTreatment(opt) {
+      if (!isTreatmentBuilderMode() || opt.kind !== "optional") return false;
+      if (opt.id !== "enceramento") return false;
+
+      return hasSelectedTreatment(
+        "cristalizacao_pintura",
+        "vitrificacao_1_ano",
+        "vitrificacao_2_anos",
+        "vitrificacao_3_anos"
+      );
+    }
+
     function calculateExtra() {
+      if (isTieredCleaningMode()) {
+        return modalConfig.selected.reduce((sum, option, index) => {
+          return sum + getTieredCleaningCharge(index, option.price);
+        }, 0);
+      }
+
+      if (isTreatmentBuilderMode()) {
+        const bundledIds = getBundledOptionalIds();
+
+        return modalConfig.selected.reduce((sum, item) => {
+          if (item.kind === "optional" && bundledIds.includes(item.id)) {
+            return sum;
+          }
+          return sum + item.price;
+        }, 0);
+      }
+
       if (modalConfig.included === 0) {
         return modalConfig.selected.reduce((sum, o) => sum + o.price, 0);
       }
@@ -628,7 +770,7 @@
         `R$ ${total.toLocaleString("pt-BR")}`;
     }
 
-    function openOptionsModal({ name, basePrice, min, included, options }) {
+    function openOptionsModal({ name, basePrice, min, included, options, pricingMode = "standard" }) {
       cart = [];
 
       modalConfig = {
@@ -636,17 +778,26 @@
         basePrice,
         min,
         included,
-        selected: [], 
+        selected: [],
         availableOptions: options,
-        freeIds: []
+        freeIds: [],
+        pricingMode
       };
 
       document.getElementById("modal-title").innerText = name;
 
-      document.getElementById("modal-rule").innerText =
-      min > 0
-        ? `Escolha no mínimo ${min} opcionais GRATIS`
-        : `Escolha opcionais para TURBINAR seu tratamento!`;
+      if (isTieredCleaningMode()) {
+        document.getElementById("modal-rule").innerText =
+          "Escolha no minimo 1 opcional.";
+      } else if (isTreatmentBuilderMode()) {
+        document.getElementById("modal-rule").innerText =
+          "Escolha pelo menos 1 tratamento e adicione opcionais extras se quiser.";
+      } else {
+        document.getElementById("modal-rule").innerText =
+        min > 0
+          ? `Escolha no mínimo ${min} opcionais GRATIS`
+          : `Escolha opcionais para TURBINAR seu tratamento!`;
+      }
 
       renderModalOptions();
 
@@ -657,6 +808,16 @@
 
     function toggleModalOption(index) {
       const opt = modalConfig.availableOptions[index];
+
+      if (isTreatmentBuilderMode()) {
+        const bundledIds = getBundledOptionalIds();
+        if (opt.kind === "optional" && bundledIds.includes(opt.id)) {
+          return;
+        }
+        if (shouldDisableTreatmentOption(opt) || shouldDisableOptionalInTreatment(opt)) {
+          return;
+        }
+      }
 
       const selectedIndex = modalConfig.selected.findIndex(o => o.id === opt.id);
       const isSelected = selectedIndex > -1;
@@ -671,6 +832,26 @@
       } else {
         // ✅ Adiciona na seleção
         modalConfig.selected.push(opt);
+
+        if (isTreatmentBuilderMode() && opt.kind === "treatment") {
+          if (opt.id === "cristalizacao_pintura") {
+            modalConfig.selected = modalConfig.selected.filter(item => {
+              return !["vitrificacao_1_ano", "vitrificacao_2_anos", "vitrificacao_3_anos"].includes(item.id);
+            });
+          }
+
+          if (["vitrificacao_1_ano", "vitrificacao_2_anos", "vitrificacao_3_anos"].includes(opt.id)) {
+            modalConfig.selected = modalConfig.selected.filter(item => item.id !== "cristalizacao_pintura");
+          }
+
+          modalConfig.selected = modalConfig.selected.filter(item => {
+            return item.kind !== "optional" || !(opt.includedOptionIds || []).includes(item.id);
+          });
+        }
+
+        if (isTreatmentBuilderMode() && isPaintProtectionTreatment(opt)) {
+          modalConfig.selected = modalConfig.selected.filter(item => item.id !== "enceramento");
+        }
 
         // ✅ Se ainda tem vaga de grátis, esse entra como grátis
         if (modalConfig.freeIds.length < modalConfig.included) {
@@ -691,17 +872,62 @@
       const container = document.getElementById("modal-options");
       container.innerHTML = "";
 
-      const isLimpezaProtetora = modalConfig.min > 0;
-      const reachedMinIncluded = modalConfig.selected.length >= modalConfig.included;
+      const isLimpezaProtetora = modalConfig.min > 0 && !isTieredCleaningMode() && !isTreatmentBuilderMode();
+      let currentGroup = "";
 
       modalConfig.availableOptions.forEach((opt, index) => {
+        if (opt.group && opt.group !== currentGroup) {
+          currentGroup = opt.group;
+          container.innerHTML += `
+            <div class="pt-2 ${container.innerHTML ? "mt-4" : ""}">
+              <p class="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">${opt.group}</p>
+            </div>
+          `;
+        }
         const isSelected = modalConfig.selected.some(o => o.id === opt.id);
         const isFree = modalConfig.freeIds.includes(opt.id);
+        const selectedIndex = modalConfig.selected.findIndex(o => o.id === opt.id);
+        const bundledIds = getBundledOptionalIds();
+        const isBundledOptional = isTreatmentBuilderMode() && opt.kind === "optional" && bundledIds.includes(opt.id);
+        const bundledByLabel = isBundledOptional ? getBundledByLabel(opt.id) : "";
+        const isBlockedTreatment = shouldDisableTreatmentOption(opt);
+        const isBlockedOptional = shouldDisableOptionalInTreatment(opt);
 
         // ✅ Regra visual do preço no MODAL
         let priceLabel = "";
+        let helperLabel = opt.description || "";
+        let disabled = false;
 
-        if (isLimpezaProtetora) {
+        if (isTieredCleaningMode()) {
+          if (isSelected) {
+            const selectedCharge = getTieredCleaningCharge(selectedIndex, opt.price);
+            priceLabel = selectedCharge === 0
+              ? `<span class="text-brand-400 font-black text-[12px]">INCLUSO</span>`
+              : `<span class="text-zinc-300 font-black text-[12px]">+ ${formatMoney(selectedCharge)}</span>`;
+          } else {
+            const nextIndex = modalConfig.selected.length;
+            const nextCharge = getTieredCleaningCharge(nextIndex, opt.price);
+            priceLabel = nextCharge === 0
+              ? `<span class="text-brand-400 font-black text-[12px]">1 INCLUSO</span>`
+              : `<span class="text-zinc-300 font-black text-[12px]">+ ${formatMoney(nextCharge)}</span>`;
+          }
+        } else if (isTreatmentBuilderMode()) {
+          if (isBundledOptional) {
+            priceLabel = `<span class="text-brand-400 font-black text-[12px]">INCLUSO</span>`;
+            helperLabel = `Ja incluso em ${bundledByLabel}.`;
+            disabled = true;
+          } else if (isBlockedTreatment) {
+            priceLabel = `<span class="text-zinc-500 font-black text-[12px]">BLOQUEADO</span>`;
+            helperLabel = "Incompativel com a protecao de pintura ja selecionada.";
+            disabled = true;
+          } else if (isBlockedOptional) {
+            priceLabel = `<span class="text-zinc-500 font-black text-[12px]">INDISP.</span>`;
+            helperLabel = "Nao disponivel com cristalizacao ou vitrificacao.";
+            disabled = true;
+          } else {
+            priceLabel = `<span class="text-zinc-300 font-black text-[12px]">${formatMoney(opt.price)}</span>`;
+          }
+        } else if (isLimpezaProtetora) {
 
           // ✅ Enquanto NÃO completou a cota de inclusos:
           // tudo aparece como grátis (mesmo não selecionado)
@@ -722,7 +948,7 @@
         }
 
         container.innerHTML += `
-          <label class="flex justify-between items-center bg-zinc-800 p-4 rounded-xl border border-zinc-700 cursor-pointer hover:bg-zinc-700 hover:border-brand-500 transition group mb-2">
+          <label class="flex justify-between items-center bg-zinc-800 p-4 rounded-xl border border-zinc-700 ${disabled ? "opacity-70 cursor-not-allowed" : "cursor-pointer hover:bg-zinc-700 hover:border-brand-500"} transition group mb-2">
             
             <div class="flex items-center gap-2 w-full">
   
@@ -730,15 +956,19 @@
                 ${priceLabel}
               </span>
 
-              <span class="text-white font-bold group-hover:text-brand-300 transition text-[12px] flex-1">
-                • ${opt.name}
-              </span>
+              <div class="flex-1">
+                <span class="text-white font-bold group-hover:text-brand-300 transition text-[12px] block">
+                  - ${opt.name}
+                </span>
+                ${helperLabel ? `<span class="text-[11px] text-zinc-500 block mt-1">${helperLabel}</span>` : ""}
+              </div>
 
             </div>
             
             <div class="relative flex items-center justify-center">
               <input type="checkbox"
                 ${isSelected ? "checked" : ""}
+                ${disabled ? "disabled" : ""}
                 onchange="toggleModalOption(${index})"
                 class="peer sr-only">
 
@@ -758,7 +988,13 @@
     }
 
     function goToOrderSummary() {
-      if (modalConfig.selected.length < modalConfig.min) {
+      if (isTreatmentBuilderMode()) {
+        const selectedTreatments = modalConfig.selected.filter(item => item.kind === "treatment");
+        if (selectedTreatments.length < modalConfig.min) {
+          showToast(`Selecione no minimo ${modalConfig.min} tratamento para continuar`);
+          return;
+        }
+      } else if (modalConfig.selected.length < modalConfig.min) {
         showToast(`Selecione no mínimo ${modalConfig.min} opcionais para continuar`);
         return;
       }
